@@ -1,0 +1,26 @@
+# Environnement virtuel
+venv/
+.env
+
+# Fichiers temporaires
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Configurations locales
+*.db
+*.sqlite3
+instance/
+.DS_Store
+
+# Variables d'environnement
+.env
+*.env
+
+# Dossiers système (Windows, VSCode, etc.)
+.vscode/
+.idea/
+*.log
+*.bak
+Thumbs.db
