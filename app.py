@@ -1,7 +1,8 @@
+import os
 from flask import Flask, render_template, redirect, url_for, request, flash
 from flask_mail import Mail, Message
 from dotenv import load_dotenv
-import os
+
 
 # Charger les variables d'environnement depuis .env
 load_dotenv()
@@ -75,3 +76,4 @@ def contact():
 # Lancer l'application
 if __name__ == '__main__':
     app.run(debug=True)
+
