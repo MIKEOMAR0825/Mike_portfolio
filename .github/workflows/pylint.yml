@@ -19,7 +19,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v3
       with:
-        python-version: 3.10
+        python-version: 3.10  # version stable disponible
         cache: 'pip'
 
     # 3️⃣ Installer les dépendances
@@ -37,4 +37,4 @@ jobs:
     # 5️⃣ Lancer les tests (optionnel)
     - name: Run tests
       run: |
-        pytest  # si tu as des tests, sinon tu peux supprimer cette étape
+        pytest  # supprime si tu n'as pas de tests
