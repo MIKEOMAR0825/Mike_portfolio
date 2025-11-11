@@ -15,7 +15,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    # 2️⃣ Installer Python et activer le cache pip
+    # 2️⃣ Installer Python 3.10 et activer le cache pip
     - name: Set up Python
       uses: actions/setup-python@v3
       with:
@@ -28,13 +28,13 @@ jobs:
         python -m pip install --upgrade pip
         python -m pip install -r requirements.txt
 
-    # 4️⃣ Linter avec Pylint
+    # 4️⃣ Linter le code avec Pylint
     - name: Run Pylint
       run: |
         python -m pip install pylint
         pylint $(git ls-files '*.py')
 
-    # 5️⃣ Lancer tests (optionnel)
+    # 5️⃣ Lancer les tests (optionnel)
     - name: Run tests
       run: |
-        pytest  # si tu as des tests
+        pytest  # si tu as des tests, sinon tu peux supprimer cette étape
