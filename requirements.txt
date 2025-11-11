@@ -1,4 +1,17 @@
+# Framework principal
 flask>=2.3
-flask-mail>=1.1
+
+# Envoi d'emails
+flask-mail==0.10.0
+
+# Gestion des variables d'environnement
 python-dotenv>=1.0
+
+# Requêtes HTTP
 requests>=2.22
+
+# Utilitaires Flask (installés automatiquement si utilisés)
+werkzeug>=2.3
+Jinja2>=3.1
+itsdangerous>=2.1
+click>=8.0
