@@ -1,7 +1,8 @@
+"""Application Flask principale pour le portfolio de Mike."""
+import os
 from flask import Flask, render_template, redirect, url_for, request, flash
 from flask_mail import Mail, Message
 from dotenv import load_dotenv
-import os
 
 # Charger les variables d'environnement depuis .env
 load_dotenv()
@@ -22,35 +23,43 @@ mail = Mail(app)
 # Routes principales
 @app.route('/')
 def home():
+    """Affiche la page index."""
     return render_template('index.html', title="Home")
 
 @app.route('/about')
 def about():
+    """Affiche la page about."""
     return render_template('about.html', title="About")
 
 @app.route('/services')
 def services():
+    """Affiche la page de services."""
     return render_template('services.html', title="Services")
 
 @app.route('/resume')
 def resume():
+    """Affiche la page resume."""
     return render_template('resume.html', title="Resume")
 
 @app.route('/portfolio')
 def portfolio():
+    """Affiche la page de portfolio."""
     return render_template('portfolio.html', title="Portfolio")
 
 @app.route('/portfolio_details')
 def portfolio_details():
+    """Affiche la page de details de portfolio."""
     return render_template('portfolio_details.html', title="Portfolio Details")
 
 @app.route('/starter_page')
 def starter_page():
+    """Affiche la page starter_page."""
     return render_template('starter_page.html', title="Starter Page")
 
 # Route contact
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
+    """Affiche la page de contact et gère l'envoi de messages."""
     if request.method == 'POST':
         name = request.form.get('name')
         email = request.form.get('email')
